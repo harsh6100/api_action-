@@ -1,0 +1,14 @@
+---
+ref: harsh_pack
+name: Hello Stackstorm
+description: Simple pack containing examples of sensor, rule, and action.
+keywords:
+    - action
+    - harsh
+version: 3.1.0
+python_versions:
+  - "2"
+  - "3"
+author: Harsh
+email: harsh6100@gmail.com
+
