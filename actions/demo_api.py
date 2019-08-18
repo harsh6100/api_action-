@@ -1,4 +1,6 @@
+#!/usr/bin/env python2
 import sys
+import requests
 
 from st2common.runners.base_action import Action
 
