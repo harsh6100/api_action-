@@ -3,7 +3,7 @@
 import sys
 import requests 
 
-from st2common.runner.base_action import Action
+from st2common.runners.base_action import Action
 
 class MyAction(Action):
 	def run(self,id,title,descp,pgcount,excerpt,pubdate):
