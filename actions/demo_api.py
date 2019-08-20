@@ -12,5 +12,5 @@ class MyEchoAction(Action):
 		print(resp.status_code)
 		print(resp.url)
 	except requests.exceptions.RequestException as e:
-    		print e
+    		print (e)
     		sys.exit(1)
