@@ -11,7 +11,7 @@ class MyEchoAction(Action):
 		resp = req.get(url)
 		print(resp.status_code)
 		print(resp.url)
-	except (requests.exceptions.RequestException,NameError) as e:
-    		print (e)
+	except requests.exceptions.RequestExceptionas:
+    		print ("Url cant be reached")
     		sys.exit(1)
 	
