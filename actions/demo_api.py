@@ -13,5 +13,5 @@ class MyEchoAction(Action):
 		print(resp.url)
 	except req.exceptions.MissingSchema:
                 print("invalid URL")
-                sys.exit(1)
+                sys.exit(0)
 	
