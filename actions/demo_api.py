@@ -7,8 +7,11 @@ from st2common.runners.base_action import Action
 
 class MyEchoAction(Action):
     def run(self, url):
-	resp = req.get(url)
-	print(resp.status_code)
-	print(resp.url)
-	
+	try:
+		resp = req.get(url)
+		print(resp.status_code)
+		print(resp.url)
+	except requests.exceptions.MissingSchema:
+                print("invalid URL")
+                sys.exit(1)
 	
