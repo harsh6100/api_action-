@@ -18,7 +18,7 @@ class MyAction(Action):
 			data2=response.json()
 			print(data2)
 			
-		except req.exceptions.Timeout:
+		except requests.exceptions.Timeout:
                         print("Request timeout")
                         sys.exit(0)
 
