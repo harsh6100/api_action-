@@ -14,3 +14,6 @@ class MyEchoAction(Action):
 	except requests.exceptions.RequestException as e:
     		print (e)
     		sys.exit(1)
+	except NameError as e1
+		print ("invalid URL")
+		sys.exit(1)
