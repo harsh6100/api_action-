@@ -13,7 +13,7 @@ class MyEchoAction(Action):
 		print(resp.url)
 	except requests.exceptions.RequestException as e:
     		print (e)
-    		sys.exit(0)
-	except NameError as e1
+    		sys.exit(1)
+	except NameError as e
 		print ("invalid URL")
-		sys.exit(0)
+		sys.exit(1)
