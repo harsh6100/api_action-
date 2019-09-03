@@ -10,8 +10,8 @@ from email.mime.text import MIMEText
 from st2common.runners.base_action import Action
 
 class MyEchoAction(Action):
-    def run(self, url):
-	flag=1
+    flag=1	
+    def run(self, url):	
 	try:
 		resp = req.get(url,timeout=6.0)
 		print(resp.status_code)
