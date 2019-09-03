@@ -33,12 +33,13 @@ class MyEchoAction(Action):
 		s.starttls()
 		s.login(MY_ADDRESS, PASSWORD)
 		msg = MIMEMultipart()       
-		message = 'action executed successfully'
-		print(message)
+		message = 'action executed successfully'		
 		msg['From']=MY_ADDRESS
 		msg['To']='harsh6100@gmail.com'
 		msg['Subject']="This is TEST"
 		msg.attach(MIMEText(message, 'plain'))
+		del msg
+                s.quit()
 		s.sendmail(MY_ADDRESS, [TO], msg.as_string())
 		del msg
 		s.quit()
