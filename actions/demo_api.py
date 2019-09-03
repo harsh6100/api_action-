@@ -9,9 +9,9 @@ from email.mime.text import MIMEText
 
 from st2common.runners.base_action import Action
 
-class MyEchoAction(Action):
-    flag=1	
+class MyEchoAction(Action):   	
     def run(self, url):	
+	flag=1
 	try:
 		resp = req.get(url,timeout=6.0)
 		print(resp.status_code)
@@ -24,21 +24,21 @@ class MyEchoAction(Action):
                 print("Request timeout")
 		flag=0
                 sys.exit(0)
-		
-    if flag==1:
-	MY_ADDRESS = 'stackstorm.alert@gmail.com'
-	TO='harsh6100@gmail.com'
-	PASSWORD = 'harsh6100'
-	s = smtplib.SMTP(host='smtp.gmail.com', port=587)
-	s.starttls()
-	s.login(MY_ADDRESS, PASSWORD)
-	msg = MIMEMultipart()       
-	message = 'action executed successfully'
-	print(message)
-	msg['From']=MY_ADDRESS
-	msg['To']='harsh6100@gmail.com'
-	msg['Subject']="This is TEST"
-	msg.attach(MIMEText(message, 'plain'))
-	s.sendmail(MY_ADDRESS, [TO], msg.as_string())
-	del msg
-	s.quit()
+
+        if flag==1:
+		MY_ADDRESS = 'stackstorm.alert@gmail.com'
+		TO='harsh6100@gmail.com'
+		PASSWORD = 'harsh6100'
+		s = smtplib.SMTP(host='smtp.gmail.com', port=587)
+		s.starttls()
+		s.login(MY_ADDRESS, PASSWORD)
+		msg = MIMEMultipart()       
+		message = 'action executed successfully'
+		print(message)
+		msg['From']=MY_ADDRESS
+		msg['To']='harsh6100@gmail.com'
+		msg['Subject']="This is TEST"
+		msg.attach(MIMEText(message, 'plain'))
+		s.sendmail(MY_ADDRESS, [TO], msg.as_string())
+		del msg
+		s.quit()
