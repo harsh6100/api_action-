@@ -27,6 +27,7 @@ class MyEchoAction(Action):
 		flag=0
     if flag==1:
 	MY_ADDRESS = 'stackstorm.alert@gmail.com'
+	TO='harsh6100@gmail.com'
 	PASSWORD = 'harsh6100'
 	s = smtplib.SMTP(host='smtp.gmail.com', port=587)
 	s.starttls()
@@ -38,6 +39,6 @@ class MyEchoAction(Action):
 	msg['To']='harsh6100@gmail.com'
 	msg['Subject']="This is TEST"
 	msg.attach(MIMEText(message, 'plain'))
-	s.send_message(msg)
+	s.sendmail(MY_ADDRESS, [TO], msg.as_string())
 	del msg
 	s.quit()
