@@ -18,12 +18,13 @@ class MyEchoAction(Action):
 		print(resp.url)		
 	except req.exceptions.MissingSchema:
                 print("invalid URL")
-                sys.exit(0)
 		flag=0
+                sys.exit(0)		
 	except req.exceptions.Timeout:
                 print("Request timeout")
-                sys.exit(0)
 		flag=0
+                sys.exit(0)
+		
     if flag==1:
 	MY_ADDRESS = 'stackstorm.alert@gmail.com'
 	TO='harsh6100@gmail.com'
