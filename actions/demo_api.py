@@ -11,7 +11,7 @@ class MyEchoAction(Action):
 		resp = req.get(url,timeout=6.0)
 		print(resp.status_code)
 		print(resp.url)
-		print(sys.exit)
+		print(status_code)
 	except req.exceptions.MissingSchema:
                 print("invalid URL")
                 sys.exit(0)
