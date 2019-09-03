@@ -15,7 +15,8 @@ class MyEchoAction(Action):
 	try:
 		resp = req.get(url,timeout=6.0)
 		print(resp.status_code)
-		print(resp.url)		
+		print(resp.url)	
+		print('Email sent')
 	except req.exceptions.MissingSchema:
                 print("invalid URL")
 		flag=0
